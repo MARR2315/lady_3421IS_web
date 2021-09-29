@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h3 align="center">ACTIVIDADES POR REALIZAR</h3>
+<table align ="center" id="principal">
+    <tr>
+        <th>tareas</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>deporte</td>
+        <td><button class="btnDelete" id_proceso="deporte" onclick="proceso(this)" onclick="Eliminar(this)">en proceso</button></td>    
+        <td><button class="btnDelete" id_concluidas="deporte" onclick="concluido(this)">concluidas</button></td>                    
+    </tr>
+    <tr>
+        <td>dormir</td>
+        <td><button class="btnDelete" id_proceso="dormir" onclick="proceso(this)">en proceso</button></td>    
+        <td><button class="btnDelete" id_concluidas="dormir" onclick="concluido(this)">concluidas</button></td>                     
+    </tr>
+    <tr>
+        <td>correr</td>
+        <td><button class="btnDelete" id_proceso="correr" onclick="proceso(this)">en proceso</button></td>    
+        <td><button class="btnDelete" id_concluidas="correr" onclick="concluido(this)">concluidas</button></td>
+    </tr>
+</table>
+<!-- EN PROCESO -->
+<h3 align="center">ACTIVIDADES EN PROCESO</h3>
+<table align="center">
+    <thead>
+        <tr>
+            <th>en proceso</th> </br>
+        </tr>
+    </thead>
+    <tbody id="proceso">
+
+    </tbody>
+</table>
+<!-- /EN PROCESO-->
+<!-- CONCLUIDAS-->
+<h3 align="center">ACTIVIDADESTERMINADAS</h3>
+<table align="center">
+    <thead>
+        <tr>
+            <th>concluidas</th> </br>
+        </tr>
+    </thead>
+    <tbody id="concluidas">
+
+    </tbody>
+</table>
+<!-- /CONCLUIDAS-->
+    
+</body>
+<script>
+
+    function proceso(producto){
+        var id_proceso = producto.getAttribute('id_proceso');
+        document.getElementById('proceso').innerHTML += '<tr><td>'+id_proceso+'</td></tr>';
+    }
+    function concluido(producto){
+        var id_concluidas = producto.getAttribute('id_concluidas');
+        document.getElementById('concluidas').innerHTML += '<tr><td>'+id_concluidas+'</td></tr>';
+    
+    }
+    </script>
+</html>

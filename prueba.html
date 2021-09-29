@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+        <table id="customers">
+            <tbody>
+            <tr>
+            <th>Persona</th>
+            <th>Empresa</th>
+            <th>URL</th>
+            <th>Accción</th>
+            </tr>
+            <tr>
+            <td>Steve Jobs</td>
+            <td>Apple</td>
+            <td>https://www.apple.com/</td>
+            <td><input type="button" value="Eliminar" /></td>
+            </tr>
+            <tr class="alt">
+            <td>Larry Page</td>
+            <td>Google</td>
+            <td>https://www.google.com.co</td>
+            <td><input type="button" value="Eliminar" /></td>
+            </tr>
+            <tr>
+            <td>Peter Thiel</td>
+            <td>PayPal</td>
+            <td>https://www.paypal.com</td>
+            <td><input type="button" value="Eliminar" /></td>
+            </tr>
+            <tr class="alt">
+            <td>Bill Gates</td>
+            <td>Microsoft</td>
+            <td>www.microsoft.com</td>
+            <td><input type="button" value="Eliminar" /></td>
+            </tr>
+            </tbody>
+            </table>
+            <script type="text/javascript">
+            function Eliminar (i) {
+             document.getElementsByTagName("table")[0].setAttribute("id","customers");
+             document.getElementById("customers ").deleteRow(i);
+            }
+            </script>
+</body>
+</html>

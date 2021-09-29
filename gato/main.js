@@ -10,7 +10,6 @@ if (simbolo == "O" || simbolo =="o")
     alert("eres jugador 2 ");
 }
 console.log(simbolo);
-
 function Siguiente() {
     let n1 = document.getElementById('n-1').value;
     let n2 = document.getElementById('n-2').value;
